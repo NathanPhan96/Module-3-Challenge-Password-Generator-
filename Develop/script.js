@@ -40,3 +40,19 @@ var useNumbers = confirm("Would you like to include numbers?")
 var useSpecialChars = confirm("Would you like to include special characters?")
 
 
+var potentialChars = []
+if (useUppercase) {
+  potentialChars = potentialChars.concat(uppercase)
+}
+
+if (useLowercase) {
+  potentialChars = potentialChars.concat(lowercase)
+}
+
+if (useNumbers) {
+  potentialChars = potentialChars.concat(numbers)
+}
+
+if (useSpecialChars) {
+  potentialChars = potentialChars.concat(special)
+}
