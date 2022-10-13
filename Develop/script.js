@@ -23,3 +23,20 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+function generatePassword() {
+  var passwordLength = prompt( "How many characters would you like your password to be> (Between 8 - 128 characters )" )
+if (passwordLength <= 7 || passwordLength >= 129) {
+  alert( "Please select between 8 - 128 characters")
+  return generatePassword()
+}
+}
+
+var useUppercase = confirm("Would you like to include uppercase letters?")
+
+var useLowercase = confirm("Would you like to include lowercase letters?")
+
+var useNumbers = confirm("Would you like to include numbers?")
+
+var useSpecialChars = confirm("Would you like to include special characters?")
+
+
