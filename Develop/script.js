@@ -41,6 +41,12 @@ var useNumbers = confirm("Would you like to include numbers?")
 var useSpecialChars = confirm("Would you like to include special characters?")
 
 
+if (useLowercase === false && useUppercase === false && useNumbers === false && useSpecialChars === false){
+  alert("Please try again")
+  return generatePassword();
+}
+
+
 var potentialChars = []
 if (useUppercase) {
   potentialChars = potentialChars.concat(uppercase)
