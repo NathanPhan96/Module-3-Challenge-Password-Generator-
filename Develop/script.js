@@ -42,7 +42,7 @@ var useSpecialChars = confirm("Would you like to include special characters?")
 
 
 if (useLowercase === false && useUppercase === false && useNumbers === false && useSpecialChars === false){
-  alert("Please try again")
+  alert("Please choose at least one type of each character")
   return generatePassword();
 }
 
