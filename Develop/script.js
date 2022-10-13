@@ -23,13 +23,14 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+
 function generatePassword() {
   var passwordLength = prompt( "How many characters would you like your password to be> (Between 8 - 128 characters )" )
 if (passwordLength <= 7 || passwordLength >= 129) {
   alert( "Please select between 8 - 128 characters")
   return generatePassword()
 }
-}
+
 
 var useUppercase = confirm("Would you like to include uppercase letters?")
 
@@ -55,4 +56,14 @@ if (useNumbers) {
 
 if (useSpecialChars) {
   potentialChars = potentialChars.concat(special)
+}
+
+
+var password = ""
+for (var i = 0; i < passwordLength; i++) {
+  console.log(Math.random())
+  password = password + potentialChars[getRandomInt(potentialChars.length)]  
+  }
+
+  return password
 }
